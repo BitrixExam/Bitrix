@@ -38,5 +38,4 @@ $this->setFrameMode(true);
 		<?endforeach?>
 	</div>	
 <?endif?>
-
 <hr>
