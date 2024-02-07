@@ -20,7 +20,6 @@ $this->setFrameMode(true);
 			<?=$arResult["DETAIL_TEXT"]?>
 		</div>
 		<div class="review-autor">
-			<!-- <$=arResult["NAME"]?><$arResult["DISPLAY_ACTIVE_FROM"] == true ? ", ".$arResult["DISPLAY_ACTIVE_FROM"]: " ";?><=$arResult["PROPERTIES"]["POSITION"]["VALUE"] == true ?? ", ".$arResult["PROPERTIES"]["POSITION"]["VALUE"];?><=$arResult["PROPERTIES"]["COMPANY"]["VALUE"] == true ?? ", ".$arResult["PROPERTIES"]["COMPANY"]["VALUE"];?>. -->
 			<?=$arResult["NAME"]?><?if($arResult["DISPLAY_ACTIVE_FROM"]): ?>, <?=$arResult["DISPLAY_ACTIVE_FROM"]?><?endif?><?if($arResult["PROPERTIES"]["POSITION"]["VALUE"]):?>, <?=$arResult["PROPERTIES"]["POSITION"]["VALUE"]?><?endif?><?php if($arResult["PROPERTIES"]["COMPANY"]["VALUE"]): ?>, <?=$arResult["PROPERTIES"]["COMPANY"]["VALUE"]?><?endif?>.
 		</div>
 	</div>
