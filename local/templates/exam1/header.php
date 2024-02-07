@@ -25,7 +25,7 @@ IncludeTemplateLangFile(__FILE__);
         <!-- header -->
         <header class="header">
             <div class="inner-wrap">
-                <div class="logo-block"><a href="" class="logo">Мебельный магазин</a>
+                <div class="logo-block"><a href="/" class="logo">Мебельный магазин</a>
                 </div>
                 <div class="main-phone-block">
                     <? $date = date("H", time()); ?>
@@ -44,15 +44,17 @@ IncludeTemplateLangFile(__FILE__);
                     </form>
                     <nav class="menu-block">
                     <?$APPLICATION->IncludeComponent(
-                        "bitrix:system.auth.form",
-                        "demo",
-                        Array(
-                            "FORGOT_PASSWORD_URL" => "/login/?forgot_password=yes",
-                            "PROFILE_URL" => "/login/user.php",
-                            "REGISTER_URL" => "/login/?register=yes",
-                            "SHOW_ERRORS" => "N"
-                        )
-                    );?>
+	"bitrix:system.auth.form", 
+	"demo", 
+	array(
+		"FORGOT_PASSWORD_URL" => "/login/?forgot_password=yes",
+		"PROFILE_URL" => "/login/user.php",
+		"REGISTER_URL" => "/login/?register=yes",
+		"SHOW_ERRORS" => "Y",
+		"COMPONENT_TEMPLATE" => "demo"
+	),
+	false
+);?>
                         <!-- <ul>
                             <li class="att popup-wrap">
                                 <a id="hd_singin_but_open" href="" class="btn-toggle">Войти на сайт</a>
